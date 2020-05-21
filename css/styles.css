@@ -1,0 +1,272 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url('../img/backteste.png');
+  background-size: auto 100vh;
+  height: 100vh;
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+}
+
+@media (min-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 600px) {
+  body {
+    background-attachment: fixed;
+    background-size: cover;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 22px;
+  }
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  background-color: #3e4a5c;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 1;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu a {
+  display: block;
+  padding: 10px 20px;
+  transition: background-color .5s, color .5s;
+}
+
+.menu a:active, .menu a:hover {
+  color: #ececec;
+}
+
+a {
+  text-decoration: none;
+  color: #ea9085;
+}
+
+a:hover {
+  filter: brightness(85%);
+}
+
+.titulo {
+  opacity: 0;
+  animation: linear 3s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo {
+  100% {
+    opacity: 1;
+  }
+}
+
+.site-subtitle, .site-title{
+  color: #e26652;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.site-title {
+  font-size: 4em;
+  font-family: 'Dancing Script', cursive;
+}
+
+.site-subtitle {
+  font-family: 'Josefin Slab', serif;
+  line-height: 1.8em;
+}
+
+.sobre {
+  padding: 2em;
+  min-height: 100vh;
+}
+
+.topicos {
+  min-height: 150vh;
+  padding: 2em;
+}
+
+.contato {
+  min-height: 30vh;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+  }
+}
+
+.sobre h2, .contato h2, .topicos h2 {
+  font-family: 'Cormorant Garamond', serif;
+  color: #e26652;
+  margin-bottom: 1.2em;
+  font-size: 2em;
+}
+
+.sobre p {
+  font-size: 28px;
+  font-family: 'Josefin Slab', serif;
+  color:#3e4a5c;
+  text-indent: 1.4em;
+  margin-bottom: 1.4em;
+  text-align: justify;
+}
+
+.sobre .avatar {
+  margin-left: 2em;
+}
+
+@media (min-width: 360px) {
+  .sobre .avatar {
+    float: inline-end;
+  }
+}
+
+.sobre .avatar img {
+  border-radius: 50%;
+  padding: 5px;
+  background-color: #e26652;
+}
+
+.topicos .grid {
+  display: grid;
+  gap: 10px;
+  background-color: #3e4a5c;
+}
+
+@media (min-width: 560px) {
+  .topicos .grid {
+    grid-template-columns: 40vw;
+    align-content: center;
+    justify-content: center;
+    gap: 2% 2%;
+  }
+}
+
+@media (min-width: 880px) {
+  .topicos .grid {
+    grid-template-columns: repeat(3, 280px);
+    align-content: center;
+    justify-content: center;
+    /* height: calc(100vh - 8em - 48px); */
+  }
+}
+
+.topicos figure {
+  text-align: center;
+}
+
+.topicos figure figcaption {
+  color: #3e4a5c;
+  font-family: 'Josefin Slab', serif;
+  font-size: 26px;
+}
+
+@media(max-width: 640px) {
+  .topicos figure figcaption {
+    font-size: 18px;
+    margin-bottom: 1em;
+  } 
+}
+
+.img-topicos {
+  height: 230px;
+  width: 100%;
+  object-fit: cover;
+  object-position: left bottom;
+  transition: transform 1s;
+}
+
+.flip-card {
+  height: 180px;
+  perspective: 1000px;
+}
+
+.flip-card:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 2s;
+}
+
+.card-front, .card-back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.card-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fbc3b8;
+  height: 230px;
+  width: 100%;
+  transform: rotateY(180deg);
+}
+
+.card-back p {
+  font-size: 13px;
+  font-family: monospace;
+  color: #3e4a5c;
+  line-height: 18px;
+  text-align: justify;
+  margin-inline: 5px;
+}
+
+.contato {
+  justify-content: space-between;
+}
+
+.contato .icons {
+  text-align: center;
+}
+
+.contato a {
+  color: #3e4a5c;
+  margin: 30px;
+  font-size: 2.5em;
+  transition: text-shadow .5s;
+}
+
+.contato a:active, .contato a:hover {
+  text-shadow: 0px 0px 8px rgba(226, 102, 102, .5);
+}
+
+.titulo img {
+  height: 120px;
+}
