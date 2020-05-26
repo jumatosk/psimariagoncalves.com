@@ -87,7 +87,7 @@ a:hover {
   }
 }
 
-.site-subtitle, .site-title{
+.site-subtitle, .site-title {
   color: #e26652;
   text-align: center;
   margin-bottom: 10px;
@@ -109,7 +109,7 @@ a:hover {
 }
 
 .topicos {
-  min-height: 150vh;
+  min-height: 120vh;
   padding: 2em;
 }
 
@@ -135,7 +135,7 @@ a:hover {
 .sobre p {
   font-size: 28px;
   font-family: 'Josefin Slab', serif;
-  color:#3e4a5c;
+  color: #3e4a5c;
   text-indent: 1.4em;
   margin-bottom: 1.4em;
   text-align: justify;
@@ -149,6 +149,11 @@ a:hover {
   .sobre .avatar {
     float: inline-end;
   }
+  .topicos .grid {
+    grid-template-columns: 40vw;
+    align-content: center;
+    justify-content: center;
+  }
 }
 
 .sobre .avatar img {
@@ -159,25 +164,34 @@ a:hover {
 
 .topicos .grid {
   display: grid;
-  gap: 10px;
-  background-color: #3e4a5c;
+  gap: 50px;
 }
 
 @media (min-width: 560px) {
   .topicos .grid {
-    grid-template-columns: 40vw;
+    grid-template-columns: repeat(2, 220px);
     align-content: center;
     justify-content: center;
-    gap: 2% 2%;
   }
 }
 
 @media (min-width: 880px) {
   .topicos .grid {
-    grid-template-columns: repeat(3, 280px);
-    align-content: center;
+    grid-template-columns: repeat(3, 220px);
+    gap: 8%;
+    align-content: flex-start;
     justify-content: center;
-    /* height: calc(100vh - 8em - 48px); */
+    height: calc(120vh - 8em - 48px);
+  }
+}
+
+@media (min-width: 1200px) {
+  .topicos .grid {
+    grid-template-columns: repeat(3, 300px);
+    gap: 8%;
+    align-content: flex-start;
+    justify-content: center;
+    height: calc(120vh - 8em - 48px);
   }
 }
 
@@ -185,21 +199,7 @@ a:hover {
   text-align: center;
 }
 
-.topicos figure figcaption {
-  color: #3e4a5c;
-  font-family: 'Josefin Slab', serif;
-  font-size: 26px;
-}
-
-@media(max-width: 640px) {
-  .topicos figure figcaption {
-    font-size: 18px;
-    margin-bottom: 1em;
-  } 
-}
-
 .img-topicos {
-  height: 230px;
   width: 100%;
   object-fit: cover;
   object-position: left bottom;
@@ -207,7 +207,7 @@ a:hover {
 }
 
 .flip-card {
-  height: 180px;
+  height: 155px;
   perspective: 1000px;
 }
 
@@ -222,6 +222,7 @@ a:hover {
 }
 
 .card-front, .card-back {
+  box-shadow: 10px 10px 5px #ccc;
   backface-visibility: hidden;
   position: absolute;
   top: 0;
