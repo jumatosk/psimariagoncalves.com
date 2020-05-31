@@ -109,12 +109,12 @@ a:hover {
 }
 
 .topicos {
-  min-height: 120vh;
+  min-height: 80vh;
   padding: 2em;
 }
 
 .contato {
-  min-height: 30vh;
+  min-height: 10vh;
 }
 
 @media (min-width: 1200px) {
@@ -149,10 +149,16 @@ a:hover {
   .sobre .avatar {
     float: inline-end;
   }
+  .sobre .avatar img {
+    height: 200px;
+  }
   .topicos .grid {
-    grid-template-columns: 60vw;
+    grid-template-columns: 45vw;
     align-content: center;
     justify-content: center;
+  }
+  .topicos {
+    margin-bottom: 60px;
   }
 }
 
@@ -173,6 +179,9 @@ a:hover {
     align-content: center;
     justify-content: center;
   }
+  .sobre .avatar img {
+    height: 300px;
+  }
 }
 
 @media (min-width: 880px) {
@@ -182,6 +191,9 @@ a:hover {
     align-content: flex-start;
     justify-content: center;
     height: calc(120vh - 8em - 48px);
+  }
+  .sobre .avatar img {
+    height: 400px;
   }
 }
 
