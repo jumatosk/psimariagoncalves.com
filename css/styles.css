@@ -6,7 +6,7 @@
 }
 
 body {
-  background-image: url('../img/backteste.png');
+  background-image: url('../img/background.png');
   background-size: auto 100vh;
   height: 100vh;
   font-size: 12px;
@@ -72,6 +72,10 @@ a {
   color: #ea9085;
 }
 
+.agendamento p {
+  font-weight: bold;
+}
+
 a:hover {
   filter: brightness(85%);
 }
@@ -114,6 +118,7 @@ a:hover {
 }
 
 .contato {
+  padding: 2em;
   min-height: 10vh;
 }
 
@@ -147,13 +152,13 @@ a:hover {
 
 @media (min-width: 360px) {
   .sobre .avatar {
-    float: inline-end;
+    float: right;
   }
   .sobre .avatar img {
     height: 200px;
   }
   .topicos .grid {
-    grid-template-columns: 45vw;
+    grid-template-columns: 60vw;
     align-content: center;
     justify-content: center;
   }
@@ -187,7 +192,7 @@ a:hover {
 @media (min-width: 880px) {
   .topicos .grid {
     grid-template-columns: repeat(3, 220px);
-    gap: 8%;
+    gap: 5%;
     align-content: flex-start;
     justify-content: center;
     height: calc(120vh - 8em - 48px);
